@@ -10,13 +10,13 @@ def playAssistantSound():
     music_dir = "www/assets/audio/start_sound.mp3"
     playsound(music_dir)
 
-def openCommand(query):
-    query = query.replace(ASSISTANT_NAME, "")
-    query = query.replace("open", "")
-    query.lower()
+# def openCommand(query):
+#     query = query.replace(ASSISTANT_NAME, "")
+#     query = query.replace("open", "")
+#     query.lower()
     
-    if query:
-        speak("Opening" +query)
-        os.system('xdg-open '+query)
-    else:
-        speak("not found")
+#     if query:
+#         speak("Opening" +query)
+#         os.system('xdg-open '+query)
+#     else:
+#         speak("not found")
