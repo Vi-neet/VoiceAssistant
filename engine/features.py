@@ -16,6 +16,7 @@ import sqlite3
 import pvporcupine
 
 from engine.helper import extract_yt_term, remove_words
+from hugchat import hugchat
 
 
 
@@ -132,7 +133,7 @@ def whatsApp(mobile_no, message, flag, name):
     
 
     if flag == 'message':
-        target_tab = 12
+        target_tab = 11
         jarvis_message = "message send successfully to "+name
 
     elif flag == 'call':
@@ -169,4 +170,13 @@ def whatsApp(mobile_no, message, flag, name):
     speak(jarvis_message)
 
 
-# Doesnt press enter yet and send message
+# chat bot 
+def chatBot(query):
+    user_input = query.lower()
+    chatbot = hugchat.ChatBot(cookie_path="engine/cookies.json")
+    id = chatbot.new_conversation()
+    chatbot.change_conversation(id)
+    response =  chatbot.chat(user_input)
+    print(response)
+    speak(response)
+    return response

@@ -25,8 +25,8 @@ cursor.execute(query)
 #                mobile_no VARCHAR(255), 
 #                email VARCHAR(255) NULL)''')
 
-# # Specify the column indices you want to import (0-based index)
-# # Example: Importing the 1st and 3rd columns
+# # # Specify the column indices you want to import (0-based index)
+# # # Example: Importing the 1st and 3rd columns
 # desired_columns_indices = [0, 30]
 
 # # Read data from CSV and insert into SQLite table for the desired columns
